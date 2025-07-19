@@ -1,0 +1,53 @@
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Logo a la izquierda - sin margen especial */
+.logo {
+  width: 150px;
+  height: 60px;
+}
+
+/* Texto centrado: usamos margen automático en izquierda y derecha para centrar */
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+/* Botones a la derecha */
+.btn-group {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto; /* para que se pegue a la derecha */
+}
+
+/* Botones */
+.btn {
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Estilos para botones específicos */
+.btn-primary:first-of-type {
+  background-color: #ffffff;
+  color: #444;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:last-of-type {
+  background-color: #f7931e;
+  color: white;
+  border: none;
+}

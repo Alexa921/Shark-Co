@@ -1,0 +1,85 @@
+/*Footer*/
+
+.footer {
+  background-color: #1c1c3a;
+  color: #ffffff;
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.footer-contenido {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.footer-texto {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.suscripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.suscripcion input[type="email"] {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  width: 250px;
+  font-size: 14px;
+  outline: none;
+}
+
+.suscripcion button {
+  padding: 12px 25px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #4f46e5, #6a5af9);
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.suscripcion button:hover {
+  background: linear-gradient(to right, #6a5af9, #4f46e5);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #777777;
+}
