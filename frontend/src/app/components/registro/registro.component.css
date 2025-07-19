@@ -116,7 +116,10 @@
   font-size: 14px;
   color: #ffffff;
   transition: 0.3s;
-  background-color: #ddc7a2;
+  background: linear-gradient(to right, #4f46e5, #6a5af9);
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
   text-align: center;
   /*tipografia*/
   font-family: "Gabarito", sans-serif;
@@ -125,10 +128,7 @@
   font-style: bold;
 }
 .b-inicio:focus {
-  background-color: #c2bfbf;
-  border-color: #75757500;
-  color: white;
-  box-shadow: 0 0 5px rgb(39, 39, 39);
+  background: linear-gradient(to right, #6a5af9, #4f46e5);
 }
 
 .texto-registro {

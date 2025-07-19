@@ -21,13 +21,21 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Trabajo</a>
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/licitaciones']"
+            href="#"
+            >Licitaciónes</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Fondos</a>
+          <a class="nav-link" href="#" [routerLink]="['/capital']">Capital</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Organizaciónes</a>
+          <a class="nav-link" href="#" [routerLink]="['/educacion']"
+            >Educación</a
+          >
         </li>
       </ul>
       <button class="btn btn-outline-primary me-2" [routerLink]="['/registro']">

@@ -1,0 +1,37 @@
+<div class="card" (click)="toggleCard()">
+  <div class="logo">
+    <img src="onu.jpg" alt="Logo" />
+  </div>
+
+  <div class="card-header">
+    <div class="left">
+      <div class="donor">{{ organizador }}</div>
+      <h3>{{ titulo }}</h3>
+    </div>
+    <div class="right">
+      <p><strong>Estado:</strong> {{ estado }}</p>
+      <p><strong>Ubicación:</strong> {{ ubicacion }}</p>
+      <p><strong>Presupuesto:</strong> {{ presupuesto }}</p>
+      <p><strong>Fecha de publicación:</strong> {{ fecha_de_publicacion }}</p>
+      <p><strong>Fecha de cierre:</strong> {{ fecha_de_cierre }}</p>
+    </div>
+  </div>
+
+  <div class="card-body" *ngIf="expanded">
+    <p><strong>Descripción:</strong> {{ descripcion }}</p>
+    <p><strong>Tipo de oferta:</strong> {{ tipo_oferta }}</p>
+    <p><strong>Ciudades elegibles:</strong> {{ ciudades_elegibles }}</p>
+    <p><strong>Sector:</strong> {{ sector }}</p>
+    <p><strong>Categoría:</strong> {{ categoria }}</p>
+    <p><strong>Idioma:</strong> {{ idioma }}</p>
+    <p><strong>Contactos:</strong> {{ contactos }}</p>
+    <p>
+      <strong>Oportunidad:</strong>
+      <a [href]="link_oportunidad" target="_blank">{{ link_oportunidad }}</a>
+    </p>
+
+    <button class="apply-btn" (click)="$event.stopPropagation()">
+      Postularse
+    </button>
+  </div>
+</div>
