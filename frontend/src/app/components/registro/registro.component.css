@@ -1,24 +1,24 @@
 .todo-login {
   background-color: #f8f9fa;
-  height: 700px;
+  height: 800px;
 }
 
 .img-sesion {
   width: 50%;
-  height: 700px;
+  height: 800px;
 }
 
 .login {
   display: flex;
-  margin-top: -510px;
-  margin-left: 990px;
+  margin-top: -580px;
+  margin-left: 1250px;
 }
 
 .inicia-titulo {
   font-size: 34px;
   text-align: center;
-  margin-top: 0px;
-  color: #323232;
+  margin-top: -60px;
+  color: #1e1e60;
   /*tipografia*/
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
@@ -34,6 +34,10 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.form-group {
+  margin-bottom: 20px;
 }
 
 .b-name {
@@ -144,10 +148,75 @@
 }
 
 .negrita {
-  color: #1c1c1c;
+  color: #1e1e60;
   /*tipografia*/
   font-family: "Gabarito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: bold;
 }
+
+/* =================== RESPONSIVE =================== */
+
+@media screen and (max-width: 1600px) {
+
+  .login {
+    display: flex;
+    margin-top: -580px;
+    margin-left: 930px;
+  }
+
+}
+
+/* Tablets (1024px) */
+@media screen and (max-width: 1024px) {
+  .todo-login {
+    height: 700px;
+  }
+
+  .img-sesion {
+    width: 55%;
+    height: 700px;
+  }
+
+  .login {
+    margin-left: 600px;
+  }
+}
+
+/* Phones (768px) */
+@media screen and (max-width: 768px) {
+  .todo-login {
+    background-color: #ffffff;
+    height: 500px;
+  }
+
+  .img-sesion {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 170px;
+  }
+}
+
+/* Small Phones (480px) */
+@media screen and (max-width: 480px) {
+  .todo-login {
+    background-color: #ffffff;
+    height: 500px;
+  }
+
+  .img-sesion {
+    display: none;
+  }
+
+  .login {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 35px;
+  }
+}
+

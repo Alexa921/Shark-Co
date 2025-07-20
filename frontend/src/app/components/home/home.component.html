@@ -1,66 +1,73 @@
-<section>
+<!-- Sección Hero -->
+<section class="hero">
   <div class="hero-container">
     <img
       class="hero-bg"
-      src="https://api.builder.io/api/v1/image/assets/TEMP/05b7d3962e643716a5cbb846926f29b3c75ce69e?placeholderIfAbsent=true&apiKey=a377cc00b8d34f6e8460e8c3e1d539f6"
+      src="https://api.builder.io/api/v1/image/assets/TEMP/05b7d3962e643716a5cbb846926f29b3c75ce69e"
       alt="Fondo estudiante feliz"
     />
-
+    <div class="hero-responsive-img"></div>
     <div class="hero-content">
-      <!-- Columna de texto -->
       <div class="hero-left">
         <h1>¿Buscas ayuda con tu <span>emprendimiento</span>?</h1>
         <p>¡Podemos ayudarte con eso!</p>
-        <button class="cta-btn">Regístrate</button>
+        <a href="/registro" class="cta-btn">Regístrate</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Sección Servicios -->
 <section class="servicios">
   <h2>
     Todo lo que necesitas para emprender con impacto,
     <span>en un solo lugar.</span>
   </h2>
   <p>
-    Ponemos a tu alcance las herramientas y oportunidades clave para<br />
-    que puedas crecer, conectar y generar ingresos reales.
+    Ponemos a tu alcance las herramientas y oportunidades clave para que puedas<br />
+    crecer, conectar y generar ingresos reales.
   </p>
 
   <div class="cards">
+  <a href="/licitaciones" class="card-link">
     <div class="card">
       <div class="icono" style="background-color: #5b72ee">
         <img src="flecha.png" alt="Monetización" />
       </div>
-      <h3>Monetización</h3>
+      <h3>Licitaciones</h3>
       <p>
-        Transformamos tu talento en ingresos. Te guiamos desde la idea hasta la
-        venta, con estrategias que realmente funcionan.
+        Encuentra oportunidades reales para venderle al Estado. Te ayudamos a participar con confianza y claridad.
       </p>
     </div>
+  </a>
+
+  <a href="/capital" class="card-link">
     <div class="card">
       <div class="icono" style="background-color: #f48c06">
-        <img src="calendario.png" alt="Educación" />
+        <img src="llamada.png" alt="Educación" />
+      </div>
+      <h3>Capital</h3>
+      <p>
+        Conecta con inversionistas que creen en tu idea. Te acercamos al capital que necesitas para crecer.
+      </p>
+    </div>
+  </a>
+
+  <a href="/educacion" class="card-link">
+    <div class="card">
+      <div class="icono" style="background-color: #29b9e7">
+        <img src="calendario.png" alt="Exhibición" />
       </div>
       <h3>Educación</h3>
       <p>
-        Aprende de los que ya lo lograron. Accede a formación práctica en
-        negocio, marketing, finanzas y más.
+        Aprende de los que ya lo lograron. Accede a formación práctica en negocio, marketing, finanzas y más.
       </p>
     </div>
-    <div class="card">
-      <div class="icono" style="background-color: #29b9e7">
-        <img src="llamada.png" alt="Exhibición" />
-      </div>
-      <h3>Exhibición</h3>
-      <p>
-        Haz que te vean. Te damos espacios y plataformas para mostrar lo que
-        haces y ganar visibilidad.
-      </p>
-    </div>
-  </div>
+  </a>
+</div>
 </section>
 
+<!-- Sección ¿Por qué nosotros? -->
 <section class="porque-nosotros">
   <h2>¿Por qué <span>nosotros</span>?</h2>
   <p>
@@ -71,46 +78,13 @@
   </p>
 
   <div class="imagenes">
-    <img
-      src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
-      alt="Mujer presentando"
-    />
-    <img
-      src="https://images.pexels.com/photos/3194524/pexels-photo-3194524.jpeg"
-      alt="Grupo trabajando"
-    />
+    <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Mujer presentando" />
+    <img src="https://images.pexels.com/photos/3194524/pexels-photo-3194524.jpeg" alt="Grupo trabajando" />
   </div>
 </section>
 
+<!-- Sección Características -->
 <section class="caracteristicas">
-  <div class="contenido">
-    <div class="izquierda">
-      <img
-        src="WhatsApp Image 2025-07-18 at 5.53.25 PM.jpeg"
-        alt="Videollamada"
-      />
-    </div>
-    <div class="derecha">
-      <h2>
-        Este espacio está diseñado<br />
-        para <span>emprendedores</span> como tú:
-      </h2>
-      <ul>
-        <li>
-          <span class="icono"></span>🔍 Que buscan visibilidad, contactos o
-          licitaciones
-        </li>
-        <li>
-          <span class="icono"></span>💡 Que necesitan monetizar su talento o
-          idea
-        </li>
-        <li>
-          <span class="icono"></span>📈 Que ya venden, pero quieren escalar
-        </li>
-      </ul>
-    </div>
-  </div>
-
   <div class="texto-superior">
     <p class="titulo">
       <span class="icono-mano">✋</span> <span class="azul">Nuestras</span>
@@ -121,8 +95,26 @@
       crecimiento sea más claro y efectivo.
     </p>
   </div>
+
+  <div class="contenido">
+    <div class="izquierda">
+      <img src="WhatsApp Image 2025-07-18 at 5.53.25 PM.jpeg" alt="Videollamada" />
+    </div>
+    <div class="derecha">
+      <h2>
+        Este espacio está diseñado<br />
+        para <span>emprendedores</span> como tú:
+      </h2>
+      <ul>
+        <li>🔍 Que buscan visibilidad, contactos o licitaciones.</li>
+        <li>💡 Que necesitan monetizar su talento o idea.</li>
+        <li>📈 Que ya venden, pero quieren escalar.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
+<!-- Sección Beneficios -->
 <section class="beneficios-emprendedores">
   <div class="bloque bloque-1">
     <div class="texto">
@@ -134,19 +126,13 @@
       </p>
     </div>
     <div class="imagen">
-      <img
-        src="WhatsApp Image 2025-07-18 at 5.59.06 PM.jpeg"
-        alt="Emprendedora pensando"
-      />
+      <img src="WhatsApp Image 2025-07-18 at 5.59.06 PM.jpeg" alt="Emprendedora pensando" />
     </div>
   </div>
 
   <div class="bloque bloque-2">
     <div class="imagen">
-      <img
-        src="WhatsApp Image 2025-07-18 at 5.59.46 PM.jpeg"
-        alt="Ejemplo de exhibición"
-      />
+      <img src="WhatsApp Image 2025-07-18 at 5.59.46 PM.jpeg" alt="Ejemplo de exhibición" />
     </div>
     <div class="texto">
       <h2>
@@ -154,9 +140,9 @@
         <span class="naranja">exhibir</span> tu emprendimiento
       </h2>
       <p>
-        Aquí encontrarás todo lo necesario para aprovechar al máximo cada
-        oportunidad de visibilidad: desde ferias y vitrinas hasta convocatorias
-        especiales y exhibiciones exclusivas.
+        Desde ferias y vitrinas hasta convocatorias especiales y exhibiciones
+        exclusivas, aquí encontrarás todo lo necesario para aprovechar al
+        máximo cada oportunidad de visibilidad.
       </p>
     </div>
   </div>
@@ -164,24 +150,20 @@
   <div class="bloque bloque-3">
     <div class="texto">
       <h2>
-        Herramientas para facilitar<br />
-        tu <span class="naranja">aprendizaje y crecimiento</span>
+        Herramientas para facilitar tu<br /> <span class="naranja">aprendizaje y crecimiento</span>
       </h2>
       <p>
         Aunque no damos clases, ofrecemos recursos y herramientas para que
-        gestiones y aproveches al máximo tu aprendizaje y crecimiento como
-        emprendedor.
+        gestiones y aproveches al máximo tu crecimiento como emprendedor.
       </p>
     </div>
     <div class="imagen">
-      <img
-        src="WhatsApp Image 2025-07-18 at 6.00.19 PM.jpeg"
-        alt="Interfaz de aprendizaje"
-      />
+      <img src="WhatsApp Image 2025-07-18 at 6.00.19 PM.jpeg" alt="Interfaz de aprendizaje" />
     </div>
   </div>
 </section>
 
+<!-- Sección Testimonios -->
 <section class="testimonios">
   <div class="contenedor">
     <div class="texto">
@@ -199,15 +181,13 @@
 
     <div class="visual">
       <div class="foto">
-        <img
-          src="WhatsApp Image 2025-07-18 at 6.01.15 PM.jpeg"
-          alt="Emprendedora con carpetas"
-        />
+        <img src="WhatsApp Image 2025-07-18 at 6.01.15 PM.jpeg" alt="Emprendedora con carpetas" />
       </div>
     </div>
   </div>
 </section>
 
+<!-- Sección Novedades -->
 <section class="novedades">
   <div class="contenedor">
     <div class="encabezado">
@@ -222,16 +202,11 @@
       <!-- Principal -->
       <div class="noticia principal">
         <div class="imagen">
-          <img
-            src="WhatsApp Image 2025-07-18 at 6.02.33 PM.jpeg"
-            alt="Videollamada emprendedores"
-          />
+          <img src="noticia-principal.jpg" alt="Videollamada emprendedores" />
         </div>
         <div class="contenido">
           <span class="etiqueta">NOTICIAS</span>
-          <h3>
-            B2Gold invertirá $740 millones en proyecto aurífero en Antioquia
-          </h3>
+          <h3>B2Gold invertirá $740 millones en proyecto aurífero en Antioquia</h3>
           <p>
             La minera canadiense B2Gold ha confirmado la viabilidad técnica,
             económica y ambiental del proyecto aurífero Gramalote, ubicado en el
@@ -240,65 +215,38 @@
         </div>
       </div>
 
-      <!-- Secundarias agrupadas -->
+      <!-- Secundarias -->
       <div class="contenedor-secundarias">
         <div class="noticia secundaria">
           <div class="imagen">
-            <img
-              src="WhatsApp Image 2025-07-18 at 6.03.51 PM.jpeg"
-              alt="Niña estudiando en laptop"
-            />
+            <img src="WhatsApp Image 2025-07-18 at 6.03.51 PM.jpeg" alt="Niña estudiando en laptop" />
             <span class="etiqueta">NOTICIAS</span>
           </div>
           <div class="contenido">
-            <h4>
-              Fondo Emprender del SENA ofrece<br />
-              financiamiento de hasta $780 millones
-            </h4>
-            <p>
-              El SENA ha lanzado nuevas convocatorias para<br />
-              financiar proyectos emprendedores.
-            </p>
+            <h4>Fondo Emprender del SENA ofrece<br /> financiamiento de hasta $780 millones</h4>
+            <p>El SENA ha lanzado nuevas convocatorias para<br /> financiar proyectos emprendedores.</p>
           </div>
         </div>
 
         <div class="noticia secundaria">
           <div class="imagen">
-            <img
-              src="WhatsApp Image 2025-07-18 at 6.04.31 PM.jpeg"
-              alt="Llamada online"
-            />
+            <img src="WhatsApp Image 2025-07-18 at 6.04.31 PM.jpeg" alt="Llamada online" />
             <span class="etiqueta">NOTICIAS</span>
           </div>
           <div class="contenido">
-            <h4>
-              Convocatoria Crea Digital 2025: apoyo<br />
-              a proyectos digitales
-            </h4>
-            <p>
-              El Ministerio TIC ha lanzado la convocatoria Crea<br />
-              Digital 2025.
-            </p>
+            <h4>Convocatoria Crea Digital 2025: apoyo<br /> a proyectos digitales</h4>
+            <p>El Ministerio TIC ha lanzado la convocatoria<br /> Crea Digital 2025.</p>
           </div>
         </div>
 
         <div class="noticia secundaria">
           <div class="imagen">
-            <img
-              src="WhatsApp Image 2025-07-18 at 6.05.14 PM.jpeg"
-              alt="Reunión con ilustración"
-            />
+            <img src="WhatsApp Image 2025-07-18 at 6.05.14 PM.jpeg" alt="Reunión con ilustración" />
             <span class="etiqueta">NOTICIAS</span>
           </div>
           <div class="contenido">
-            <h4>
-              Estímulos 2025 para emprendedores<br />
-              culturales
-            </h4>
-            <p>
-              La Biblioteca Nacional ofrece financiamiento<br />
-              a proyectos culturales.
-            </p>
+            <h4>Estímulos 2025 para emprendedores<br /> culturales</h4>
+            <p>La Biblioteca Nacional ofrece financiamiento<br /> a proyectos culturales.</p>
           </div>
         </div>
       </div>

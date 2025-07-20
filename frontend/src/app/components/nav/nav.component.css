@@ -23,6 +23,17 @@
   align-items: center;
 }
 
+/* Hover: cambia el color al pasar el mouse */
+.nav-link:hover {
+  color: #2f327d !important; /* Azul personalizado */
+}
+
+.nav-link:focus,
+.nav-link:active {
+  color: #2f327d !important;
+}
+
+
 /* Botones a la derecha */
 .btn-group {
   display: flex;
@@ -50,4 +61,33 @@
   background-color: #f7931e;
   color: white;
   border: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
 }

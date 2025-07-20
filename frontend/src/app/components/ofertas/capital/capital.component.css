@@ -122,3 +122,62 @@
 .card + .card {
   margin-top: 2.5rem;
 }
+
+/* =================== RESPONSIVE =================== */
+
+/* Phones (768px) */
+@media screen and (max-width: 768px) {
+    .card {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .card-header .right {
+    text-align: center;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .card-header p {
+    font-size: 0.85rem;
+  }
+
+  .donor {
+    font-size: 0.7rem;
+  }
+
+  .card-body {
+    padding-top: 1rem;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+  }
+
+  /* LOGO: lo movemos dentro del flujo y centramos */
+  .logo {
+    position: relative;
+    margin: 0 auto 1rem auto;
+    top: 0;
+    left: 0;
+  }
+
+  /* BOTÓN POSTULARSE: lo ponemos al final del card, centrado */
+  .apply-btn {
+    position: relative;
+    margin-top: 1.5rem;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
