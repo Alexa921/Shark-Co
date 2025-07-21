@@ -1,1 +1,24 @@
-<p>ofertas works!</p>
+<h2>Agregar nueva oferta</h2>
+<form (ngSubmit)="guardarOferta()" #form="ngForm">
+  <input type="text" [(ngModel)]="oferta.titulo" name="titulo" placeholder="Título" required />
+  <input type="text" [(ngModel)]="oferta.tipo_oferta" name="tipo_oferta" placeholder="Tipo de oferta" />
+  <!-- Agrega los demás campos que necesites -->
+
+  <button type="submit">Guardar oferta</button>
+</form>
+
+<hr>
+
+<h2>Ofertas guardadas</h2>
+<div *ngIf="ofertasGuardadas.length > 0; else sinOfertas">
+  <div *ngFor="let o of ofertasGuardadas" class="oferta-item">
+    <h3>{{ o.titulo }}</h3>
+    <p><strong>Tipo:</strong> {{ o.tipo_oferta }}</p>
+    <p><strong>Descripción:</strong> {{ o.descripcion }}</p>
+    <!-- Agrega los demás campos si quieres -->
+  </div>
+</div>
+
+<ng-template #sinOfertas>
+  <p>No hay ofertas guardadas aún.</p>
+</ng-template>

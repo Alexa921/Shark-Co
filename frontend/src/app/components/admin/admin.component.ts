@@ -13,6 +13,9 @@ export class AdminComponent {
   ofertaForm: FormGroup;
   tiposOferta: string[] = ['Licitaciones', 'Capital', 'Educación'];
   logoPreview: string | ArrayBuffer | null = null;
+  ofertas: any[] = []; // ✅ ¡Esto es fundamental para que los botones aparezcan!
+
+  editIndex: number | null = null;
 
   constructor(private fb: FormBuilder) {
     this.ofertaForm = this.fb.group({
@@ -29,18 +32,13 @@ export class AdminComponent {
       categoria: [''],
       idioma: [''],
       link_oportunidad: [''],
-      logo: [null], // archivo o base64
+      logo: [null],
 
-      // Capital
       monto: [''],
       moneda: [''],
-
-      // Educación
       modalidad_educativa: [''],
       duracion: [''],
       institucion: [''],
-
-      // Licitaciones
       oficina: [''],
       entidades: [''],
       direccion: [''],
@@ -67,7 +65,39 @@ export class AdminComponent {
   }
 
   guardarOferta() {
-    console.log('Oferta guardada:', this.ofertaForm.value);
-    console.log('Logo (archivo):', this.ofertaForm.get('logo')?.value);
+    const nuevaOferta = {
+      ...this.ofertaForm.value,
+      logoPreview: this.logoPreview,
+    };
+
+    if (this.editIndex !== null) {
+      this.ofertas[this.editIndex] = nuevaOferta;
+      this.editIndex = null;
+    } else {
+      this.ofertas.push(nuevaOferta);
+    }
+
+    this.ofertaForm.reset({ tipo: 'Licitaciones' });
+    this.logoPreview = null;
+  }
+
+editarOferta(index: number) {
+  const oferta = this.ofertas[index];
+  this.ofertaForm.patchValue(oferta);
+  this.logoPreview = oferta.logoPreview;
+  this.editIndex = index;
+
+  const tipo = oferta.tipo;
+  this.ofertaForm.get('tipo')?.setValue(tipo);
+  this.ofertaForm.get('tipo')?.updateValueAndValidity();
+}
+
+
+
+  eliminarOferta(index: number) {
+    this.ofertas.splice(index, 1);
+    if (this.editIndex === index) {
+      this.editIndex = null;
+    }
   }
 }

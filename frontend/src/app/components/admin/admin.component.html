@@ -65,36 +65,42 @@
   </div>
 
   <div class="mb-3">
-    <label>Estado:</label
-    ><input class="form-control" type="text" formControlName="estado" />
+    <label>Estado:</label>
+    <input class="form-control" type="text" formControlName="estado" />
   </div>
+
   <div class="mb-3">
-    <label>Ubicación:</label
-    ><input class="form-control" type="text" formControlName="ubicacion" />
+    <label>Ubicación:</label>
+    <input class="form-control" type="text" formControlName="ubicacion" />
   </div>
+
   <div class="mb-3">
-    <label>Ciudades elegibles:</label
-    ><input
+    <label>Ciudades elegibles:</label>
+    <input
       class="form-control"
       type="text"
       formControlName="ciudades_elegibles"
     />
   </div>
+
   <div class="mb-3">
-    <label>Sector:</label
-    ><input class="form-control" type="text" formControlName="sector" />
+    <label>Sector:</label>
+    <input class="form-control" type="text" formControlName="sector" />
   </div>
+
   <div class="mb-3">
-    <label>Categoría:</label
-    ><input class="form-control" type="text" formControlName="categoria" />
+    <label>Categoría:</label>
+    <input class="form-control" type="text" formControlName="categoria" />
   </div>
+
   <div class="mb-3">
-    <label>Idioma:</label
-    ><input class="form-control" type="text" formControlName="idioma" />
+    <label>Idioma:</label>
+    <input class="form-control" type="text" formControlName="idioma" />
   </div>
+
   <div class="mb-3">
-    <label>Link de la Oportunidad:</label
-    ><input
+    <label>Link de la Oportunidad:</label>
+    <input
       class="form-control"
       type="url"
       formControlName="link_oportunidad"
@@ -104,66 +110,88 @@
   <!-- LICITACIONES -->
   <div *ngIf="tipoSeleccionado === 'Licitaciones'">
     <div class="mb-3">
-      <label>Oficina:</label
-      ><input class="form-control" formControlName="oficina" />
+      <label>Oficina:</label>
+      <input class="form-control" formControlName="oficina" />
     </div>
     <div class="mb-3">
-      <label>Entidades:</label
-      ><input class="form-control" formControlName="entidades" />
+      <label>Entidades:</label>
+      <input class="form-control" formControlName="entidades" />
     </div>
     <div class="mb-3">
-      <label>Dirección:</label
-      ><input class="form-control" formControlName="direccion" />
+      <label>Dirección:</label>
+      <input class="form-control" formControlName="direccion" />
     </div>
     <div class="mb-3">
-      <label>Sitio:</label
-      ><input class="form-control" formControlName="sitio" />
+      <label>Sitio:</label>
+      <input class="form-control" formControlName="sitio" />
     </div>
     <div class="mb-3">
-      <label>Empleados:</label
-      ><input class="form-control" formControlName="empleados" />
+      <label>Empleados:</label>
+      <input class="form-control" formControlName="empleados" />
     </div>
     <div class="mb-3">
-      <label>Tipo de Licitación:</label
-      ><input class="form-control" formControlName="tipoLicitacion" />
+      <label>Tipo de Licitación:</label>
+      <input class="form-control" formControlName="tipoLicitacion" />
     </div>
   </div>
 
   <!-- CAPITAL -->
   <div *ngIf="tipoSeleccionado === 'Capital'">
     <div class="mb-3">
-      <label>Presupuesto:</label
-      ><input class="form-control" formControlName="monto" />
+      <label>Presupuesto:</label>
+      <input class="form-control" formControlName="monto" />
     </div>
     <div class="mb-3">
-      <label>Moneda:</label
-      ><input class="form-control" formControlName="moneda" />
+      <label>Moneda:</label>
+      <input class="form-control" formControlName="moneda" />
     </div>
     <div class="mb-3">
-      <label>Agencia Financiadora:</label
-      ><input class="form-control" formControlName="organizador" />
+      <label>Agencia Financiadora:</label>
+      <input class="form-control" formControlName="organizador" />
     </div>
   </div>
 
   <!-- EDUCACIÓN -->
   <div *ngIf="tipoSeleccionado === 'Educación'">
     <div class="mb-3">
-      <label>Organizador:</label
-      ><input class="form-control" formControlName="organizador" />
+      <label>Organizador:</label>
+      <input class="form-control" formControlName="organizador" />
     </div>
     <div class="mb-3">
-      <label>Modalidad:</label
-      ><input class="form-control" formControlName="modalidad_educativa" />
+      <label>Modalidad:</label>
+      <input class="form-control" formControlName="modalidad_educativa" />
     </div>
     <div class="mb-3">
-      <label>Duración:</label
-      ><input class="form-control" formControlName="duracion" />
+      <label>Duración:</label>
+      <input class="form-control" formControlName="duracion" />
     </div>
     <div class="mb-3">
-      <label>Institución:</label
-      ><input class="form-control" formControlName="institucion" />
+      <label>Institución:</label>
+      <input class="form-control" formControlName="institucion" />
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary mt-3">Guardar Oferta</button>
+  <button type="submit" class="btn btn-primary mt-3">
+  {{ editIndex !== null ? 'Guardar Oferta' : 'Guardar Oferta' }}
+</button>
+
 </form>
+
+<!-- Lista de ofertas por categoría -->
+<div class="ofertas-lista" *ngIf="ofertas.length > 0">
+  <h2>Ofertas Guardadas</h2>
+
+  <div *ngFor="let oferta of ofertas; let i = index" class="oferta-card">
+    <h3>{{ oferta.titulo || '(Sin título)' }}</h3>
+    <p><strong>Tipo:</strong> {{ oferta.tipo }}</p>
+    <p><strong>Descripción:</strong> {{ oferta.descripcion }}</p>
+    <p><strong>Organizador:</strong> {{ oferta.organizador }}</p>
+
+    <div *ngIf="oferta.logoPreview">
+      <img [src]="oferta.logoPreview" alt="Logo" class="logo-preview" />
+    </div>
+
+    <button (click)="editarOferta(i)" class="btn editar">Editar</button>
+    <button (click)="eliminarOferta(i)" class="btn eliminar">Eliminar</button>
+  </div>
+</div>

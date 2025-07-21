@@ -8,7 +8,7 @@ import { CapitalComponent } from './components/ofertas/capital/capital.component
 import { AdminComponent } from './components/admin/admin.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' }, // ← ESTA LÍNEA ES CLAVE
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'login', component: LoginComponent },
